@@ -3,6 +3,7 @@
 # Atlassian: use Cursor Settings → Tools & MCP to add the official Atlassian plugin
 # (cursor.com/marketplace/atlassian); it registers MCP and OAuth. This file lists CLI-installable extensions only.
 Shopify.ruby-lsp
+waderyan.gitblame
 sorbet.sorbet-vscode-extension
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
@@ -10,3 +11,5 @@ Vue.volar
 waderyan.gitblame
 TakumiI.markdowntable
 bierner.markdown-mermaid
+
+

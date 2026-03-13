@@ -1,0 +1,30 @@
+---
+description: Enforce max 78 character line length in all code
+globs: **/*
+alwaysApply: false
+---
+# Line Length (78 Columns)
+- Keep every line of code **≤ 78 characters** (including spaces).
+- If a line would exceed 78 characters:
+  - **Break long expressions** across multiple lines using sensible indentation.
+  - **Wrap long strings** (e.g., using concatenation or multi-line literals where idiomatic).
+  - **Extract helpers** (functions, variables, or components) when a line mixes too many responsibilities.
+- Prefer readability over clever one-liners when enforcing this limit.
+**Examples**
+```python
+# ✅ GOOD (wrapped at logical boundaries)
+result = some_expensive_calculation(
+    user_id,
+    project_id,
+    options={"retry": True, "timeout": 5},
+)
+# ❌ BAD (single long line > 78 chars)
+result = some_expensive_calculation(user_id, project_id, options={"retry": True, "timeout": 5})
+If you want this to apply to **all projects via dotfiles**, we can also wire a `.cursor/rules` directory into `~/.cursor` the same way you already do with `skills`, `commands`, and `agents`.
+
+# ✅ GOOD (text wrapped with '\' and leading '"' on next line)
+message = "This is a very long message that would otherwise exceed the 78 character limit, so we "\
+          "split it across multiple lines while keeping it readable."
+
+# ❌ BAD (single long string > 78 chars)
+message = "This is a very long message that would otherwise exceed the 78 character limit, so we split it across multiple lines while keeping it readable."

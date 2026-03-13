@@ -1,0 +1,27 @@
+---
+description: Always present problem and options, then ask for approval before making changes
+alwaysApply: true
+---
+
+# Solution Workflow and Approval
+
+When the user asks for a solution (to a bug, feature, refactor, or config change), follow this workflow:
+
+- **1. Restate the problem clearly**
+  - Summarize the user's request or problem in your own words.
+  - Call out any important constraints, goals, or context you inferred.
+
+- **2. Propose one or more possible solutions**
+  - Describe at least one concrete solution approach.
+  - When helpful, include **alternative options** (with brief pros/cons).
+  - Be explicit about trade-offs, risks, and assumptions.
+
+- **3. Ask for explicit approval before changing anything**
+  - Before editing files, running tools that modify state, or applying a plan, ask:
+    - "Would you like me to apply this solution now?" or an equivalent confirmation question.
+  - Do not make code or config changes until the user confirms which option to proceed with.
+
+- **4. After approval, implement the chosen solution**
+  - Clearly state which option was chosen.
+  - Then perform the concrete steps (edits, commands, refactors) that were agreed on.
+
